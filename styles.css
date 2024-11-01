@@ -1,0 +1,305 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%; /* Asegura que el body ocupe toda la altura */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-image: url('images/caca.jpg'); /* Reemplaza con tu imagen */
+    background-size: cover; /* Cubre toda el área */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* La imagen se queda fija al hacer scroll */
+    background-color: #f4f4f4; /* Color de fondo por defecto */
+    position: relative; /* Para el pseudo-elemento */
+}
+
+body::before {
+    content: ''; /* Requerido para pseudo-elementos */
+    position: absolute; /* Posición absoluta */
+    top: 0; /* Alinea al top */
+    left: 0; /* Alinea a la izquierda */
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro con 50% de opacidad */
+    z-index: 1; /* Coloca debajo del contenido */
+}
+
+.container {
+    position: relative; /* Para que el contenido esté por encima del overlay */
+    z-index: 2; /* Asegura que el contenido esté por encima del overlay */
+    color: white; /* Color del texto para visibilidad */
+    padding: 20px; /* Añade un poco de padding */
+}
+
+header {
+    background: rgba(0, 123, 255, 0.8); /* Fondo azul semi-transparente */
+    color: #fff;
+    padding: 20px 0;
+}
+
+nav {
+    text-align: center; /* Centra el contenido del nav */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.icono {
+    width: 200px; /* Tamaño deseado */
+    height: auto;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    display: flex; /* Cambiado a flexbox */
+    align-items: center; /* Alinea verticalmente */
+    justify-content: space-between; /* Espacio entre icono y nav */
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease; /* Agrega transición */
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: #FFD700; /* Cambia el color al pasar el mouse */
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+}
+.container {
+    position: relative;
+    z-index: 2;
+    color: white;
+    padding: 20px;
+    width: 80%;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo semitransparente */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Sombra para resaltar el cuadro */
+    backdrop-filter: blur(5px); /* Efecto de desenfoque en el fondo */
+}
+
+/* Nueva clase para las imágenes */
+.content-image {
+    display: block;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 500px; /* Ajusta el tamaño máximo de las imágenes */
+    border-radius: 10px; /* Bordes redondeados para las imágenes */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para resaltar las imágenes */
+}
+.container {
+    /* Estilos anteriores */
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    width: 80%;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+
+    /* Estilo de letra */
+    font-family: 'Georgia', serif; /* Cambia la fuente a una más elegante */
+    font-size: 1.1em; /* Ajusta el tamaño de letra */
+    color: #f4f4f4; /* Mantiene el color claro para visibilidad */
+    line-height: 1.8; /* Aumenta la separación de líneas para legibilidad */
+    text-align: justify; /* Justifica el texto */
+}
+.container {
+    /* Estilos previos */
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    width: 80%;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+
+    /* Ajustes de letra */
+    font-family: 'Georgia', serif; /* Fuente elegante */
+    font-size: 1.1em; /* Tamaño de letra adecuado */
+    color: #f4f4f4;
+    line-height: 1.8; /* Separación entre líneas */
+    text-align: justify; /* Justifica el texto */
+    overflow-wrap: break-word; /* Evita desbordamientos de palabras largas */
+    word-spacing: 0.1em; /* Espacio entre palabras para mejorar legibilidad */
+}
+article {
+    margin-bottom: 40px; /* Espacio entre artículos */
+    padding: 20px; /* Espaciado interno del artículo */
+    background-color: rgba(255, 255, 255, 0.15); /* Fondo semitransparente */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para resaltar el artículo */
+}
+
+h2, h3 {
+    margin-bottom: 10px; /* Espacio debajo del título y subtítulo */
+}
+
+.date {
+    font-size: 0.9em; /* Tamaño más pequeño para la fecha */
+    color: #ddd; /* Color tenue para no distraer del contenido */
+    margin-bottom: 15px; /* Espacio debajo de la fecha */
+}
+
+.intro {
+    font-weight: bold; /* Destaca la introducción */
+    margin-bottom: 15px; /* Espacio debajo de la introducción */
+}
+
+.content-image {
+    display: block;
+    margin: 15px auto; /* Centra y añade espacio a la imagen */
+    width: 100%;
+    max-width: 500px; /* Tamaño máximo de las imágenes */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para la imagen */
+}
+.container {
+    display: flex;
+    flex-direction: column; /* Coloca cada elemento en una columna (uno debajo del otro) */
+    gap: 40px; /* Espacio entre cada artículo */
+    align-items: center; /* Centra los artículos horizontalmente */
+}
+
+article {
+    width: 100%; /* Asegura que el artículo ocupe todo el ancho disponible en el contenedor */
+    max-width: 800px; /* Define un ancho máximo para mantener el diseño legible */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+body::before {
+    content: '';
+    position: fixed; /* Cambia a fixed para que cubra toda la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Aumenta la opacidad para oscurecer más el fondo */
+    z-index: 0; /* Asegura que quede detrás del contenido */
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espacio reducido entre cada artículo */
+    align-items: center;
+}
+/* Estilos específicos para el contenedor del encabezado */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Alinea el contenido al principio del contenedor */
+    padding: 10px 20px; /* Ajusta el espaciado si es necesario */
+}
+
+/* Alinea el icono a la izquierda */
+.icono {
+    margin-right: 20px; /* Añade espacio entre el icono y el menú */
+}
+
+/* Estilos para el menú de navegación */
+nav {
+    flex-grow: 1;
+    text-align: center; /* Centra el menú horizontalmente */
+}
+
+nav ul {
+    display: inline-flex; /* Alinea los botones en línea */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 20px; /* Espaciado entre botones */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: #FFD700;
+    transform: scale(1.1);
+}
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Opacidad del fondo */
+    z-index: 0; /* Mantén este z-index bajo */
+}
+
+/* Asegura que el contenedor del encabezado esté encima del fondo */
+.header-container {
+    position: relative;
+    z-index: 1; /* Eleva el z-index para que el menú sea clicable */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 20px;
+}
+
+.icono {
+    margin-right: 20px;
+}
+
+/* Centrado del menú y ajuste de estilo */
+nav {
+    flex-grow: 1;
+    text-align: center;
+}
+
+nav ul {
+    display: inline-flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: #FFD700;
+    transform: scale(1.1);
+}
+.celulares{
+    margin-right: 0.5px;
+    width: 600px;
+    height: auto;
+    border-radius: 15px;
+}
